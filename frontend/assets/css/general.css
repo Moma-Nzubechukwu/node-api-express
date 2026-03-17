@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+
+}
+body{
+    font-family: monospace;
+    background-color: rgb(6, 6, 61);
+}
+header{
+    position: fixed;
+    top:0;
+    height: 70px;
+    width: 100vw;
+    border-bottom: .2px solid rgba(255, 217, 0, 0.506);    
+}
+  :root {
+    --navy:    #0d1b2a;
+    --navy2:   #14253a;
+    --navy3:   #1c3250;
+    --gold:    #c9a84c;
+    --gold2:   #e8c97a;
+    --gold3:   #f5e4b0;
+    --cream:   #f8f4ec;
+    --text:    #e8e2d6;
+    --muted:   #7a8fa6;
+    --border:  rgba(201,168,76,0.18);
+    --error:   #e05a5a;
+    --success: #5acea4;
+  }

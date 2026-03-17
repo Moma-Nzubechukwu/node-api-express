@@ -1,0 +1,132 @@
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+legend{
+    color: white;
+    text-align: center;
+}
+fieldset{
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+padding: 10px;
+margin: 10px;
+width: 95vw;
+
+}
+
+label{
+    color: white;
+    display: block;
+    text-align: left;
+    /* background-color: red; */
+    width: 100%;
+    padding: 10px 20px 0 20px;
+}
+    .css-signup-form-section{
+        display: none;
+    }
+        .css-error-mesage,
+    .css-change-auth-methodes{
+        color: white;
+        padding: 2px;
+    }
+    .css-change-auth-methodes:hover{
+        color: var(--gold3);
+    }
+    .css-error-mesage{
+        display: none;
+        color: rgb(235, 48, 48);
+    }
+    fieldset input:focus{
+        outline: 1px solid var(--gold3);
+        background-color: transparent;
+    }
+    fieldset button{
+        padding: 0;
+        background-color: var(--gold2);
+    }
+@media screen and (max-width:640px) {
+    .css-signup-form-section,
+    .css-login-form-section{
+        border-radius: 50px;
+        /* height: 70vh; */
+    }
+    fieldset button,
+    fieldset input{
+        margin: 10px;
+        padding: 20px;
+        width: 70vw;
+        height: 50px;
+        border-radius: 20px;
+        background-color:  rgb(11, 11, 131);
+        border: none;
+        color: inherit;
+        color: white;
+    }
+    fieldset input:focus{
+        outline: 1px solid rgba(255, 217, 0, 0.676);
+        background-color: transparent;
+    }
+    fieldset button{
+        padding: 0;
+        background-color: rgba(255, 217, 0, 0.676);
+    }
+
+
+
+}
+@media screen and (min-width: 640px) {
+
+      .css-signup-form-section,
+    .css-login-form-section{
+        border-radius: 50px;
+        
+        /* background-color: red; */
+        /* height: 70vh; */
+    }
+    fieldset{
+        width: 40vw;
+    }
+    fieldset button,
+    fieldset input{
+        margin: 10px;
+        padding: 20px;
+        width: 50vw;
+        height: 50px;
+        border-radius: 5px;
+        background-color:  rgb(11, 11, 131);
+        border: none;
+        color: inherit;
+        color: white;
+    }
+    fieldset input::placeholder{
+        color: rgba(255, 255, 255, 0.51);
+    }
+      fieldset input:focus{
+        outline: 1px solid rgba(255, 217, 0, 0.676);
+        background-color: transparent;
+    }
+    fieldset button{
+        width: 30vw;
+        padding: 0;
+        background-color: rgba(255, 217, 0, 0.676);
+    }
+        .css-liquid-glass{
+    background-color: rgba(147, 100, 100, 0);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    backdrop-filter: blur(10px) saturate(160%);
+    border: 0.1px solid rgba(255, 255, 255, 0.445);
+}
+
+
+    
+}

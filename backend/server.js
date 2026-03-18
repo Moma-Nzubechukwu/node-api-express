@@ -22,22 +22,60 @@ app.get("/api/phones/:devKey", (req, res)=>{
 		
 		if (isInApiList){	
 			const  phoneName = req.query["Company Name"]
+			const modelName = req.query["Model Name"]
+			const mobileWeight = req.query["Mobile Weight"]
+			const ramSize = req.query["RAM"]
+			const frontCamera = req.query["Front Camera"]
+			const backCamera = req.query["Back Camera"]
+			const processor = req.query["Processor"]
+			const battryCapacity = req.query["Battery Capacity"]
+			const screenSize = req.query["Screen Size"]
+			const laumchedPrize = req.query["Launched Price"]
+			let newData = data;
 			if (phoneName){
-				const newData = data.filter(item => phoneName === item["Company Name"])
-				res.send((newData))
+				newData = newData.filter(item => phoneName === item["Company Name"])
+				
 
 
-			}else{
-				res.send(data.slice(0, 5))
 			}
+			if (modelName){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (MobileWeight){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (ramSize){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+
+			}
+			if (frontCamera{
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (backCamera){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (processor){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (battryCapacity){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (screenSize){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+			if (launchedPrize){
+				newData = newData.filter(item => modelNumber === item["Model Name"])
+			}
+
 		}else{
-			res.send({
+			newData = ({
 				"status":"sucess",
 				"message":"not authorized"
 
 			})
 		}
 	}
+	res.send(newData)
 
 })
 app.get("/api/get-api", (req, res)=>{

@@ -13,6 +13,7 @@ app.get("/api/phones/:devKey", (req, res)=>{
 	console.log(req.query)
 	const {devKey} = req.params
 	let isInApiList = false
+	let newData = data;
 	if (devKey){
 		apiKeys.forEach((api)=>{
 			if (api === devKey){
@@ -30,8 +31,8 @@ app.get("/api/phones/:devKey", (req, res)=>{
 			const processor = req.query["Processor"]
 			const battryCapacity = req.query["Battery Capacity"]
 			const screenSize = req.query["Screen Size"]
-			const laumchedPrize = req.query["Launched Price"]
-			let newData = data;
+			const launchedPrize = req.query["Launched Price"]
+//			let newData = data;
 			if (phoneName){
 				newData = newData.filter(item => phoneName === item["Company Name"])
 				
@@ -41,30 +42,30 @@ app.get("/api/phones/:devKey", (req, res)=>{
 			if (modelName){
 				newData = newData.filter(item => modelNumber === item["Model Name"])
 			}
-			if (MobileWeight){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+			if (mobileWeight){
+				newData = newData.filter(item => mobileWeight === item["Mobile Weight"])
 			}
 			if (ramSize){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+				newData = newData.filter(item => ramSize === item["RAM"])
 
 			}
-			if (frontCamera{
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+			if (frontCamera){
+				newData = newData.filter(item => frontCamera === item["Front Camera"])
 			}
 			if (backCamera){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+				newData = newData.filter(item => backCamera === item["Back Camera"])
 			}
 			if (processor){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+				newData = newData.filter(item => processor === item["Processor"])
 			}
 			if (battryCapacity){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+				newData = newData.filter(item => battryCapacity === item["Battery Capacity"])
 			}
 			if (screenSize){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+				newData = newData.filter(item => screenSize === item["Screen Size"])
 			}
 			if (launchedPrize){
-				newData = newData.filter(item => modelNumber === item["Model Name"])
+				newData = newData.filter(item => launchedPrize === item["Launched Price"])
 			}
 
 		}else{
